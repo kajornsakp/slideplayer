@@ -43,7 +43,7 @@ of this project:
 
 Alternately, you can place a `.flutter_location_config` file in the directory
 containing flutter-desktop-embedding, containing a path to the Flutter tree to
-use, if you prefer not to have the Flutter tree next to flutter-desktop-emebbing.
+use, if you prefer not to have the Flutter tree next to flutter-desktop-embedding.
 
 ### Running
 Open `FlutterSlides.xcodeproj` under macos, and build and run the `Flutter Slides` target.
