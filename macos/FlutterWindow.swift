@@ -50,7 +50,7 @@ class RecentFilesPlugin : NSObject, FLEPlugin {
   
     let channel = FlutterMethodChannel(name: "FlutterSlides:CustomPlugin",
                                        binaryMessenger: registrar.messenger,
-                                        codec: FlutterJSONMethodCodec.sharedInstance())
+                                      codec: FlutterJSONMethodCodec.sharedInstance())
     let instance = RecentFilesPlugin(channel: channel)
     registrar.addMethodCallDelegate(instance, channel: channel)
   }
