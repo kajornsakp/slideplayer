@@ -21,11 +21,13 @@ For more details on the [presentation file structure](https://github.com/flutter
 
 ### Requirements
 - XCode 10 or higher
-- Flutter tracking the master branch ([Why?](https://github.com/google/flutter-desktop-embedding/blob/master/library/README.md#Caveats))
+- Flutter tracking a recent version, preferably the Master branch ([Why?](https://github.com/google/flutter-desktop-embedding/blob/master/library/README.md#Caveats))
 
-**If your versions are earlier than these commits, it definitely won't work.  If they're later, it may work but we can't make any claims to that.**
-- Your Flutter Desktop Embedding version must be on this commit [0621734](https://github.com/google/flutter-desktop-embedding/commit/06217345bd60d56d248d65d23312c691001704d7)
-- Your Flutter version must be on this commit [b45a8f464d](https://github.com/flutter/flutter/commit/b45a8f464d67ee3733cd5d485606285fc993afdf)
+**Flutter Desktop Embedding is constantly evolving, and you may need to tinker with your FDE checkout or Flutter version to get it running.  Please see the FDE repo for further information.**
+
+**As of March 28th, 2019**
+- Last FDE commit working on the Flutter stable branch (1.2.1): [306773e](https://github.com/google/flutter-desktop-embedding/commit/306773e5e429f299eaaf1867546bcbd7a7af5dab)
+- Flutter checkout required for the most recent version of FDE(currently [1ca25dc](https://github.com/google/flutter-desktop-embedding/commit/1ca25dc203a94f81202c86a3014aca69db817e55)): [dd23be3](https://github.com/flutter/flutter/commit/dd23be3936272b974709222af1a8309ab65244cc)
 
 
 ### Setting Up
