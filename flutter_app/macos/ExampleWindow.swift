@@ -12,7 +12,22 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#import <FlutterMacOS/FlutterMacOS.h>
-#import <FlutterEmbedderColorPanel/FlutterEmbedderColorPanel.h>
-#import <FlutterEmbedderFileChooser/FlutterEmbedderFileChooser.h>
-#import <FlutterEmbedderMenubar/FlutterEmbedderMenubar.h>
+import Cocoa
+import FlutterMacOS
+
+class ExampleWindow: NSWindow {
+  @IBOutlet weak var flutterViewController: FLEViewController!
+
+  override func awakeFromNib() {
+    RegisterGeneratedPlugins(registry: flutterViewController)
+
+    let assets = NSURL.fileURL(withPath: "flutter_assets", relativeTo: Bundle.main.resourceURL)
+    var arguments: [String] = [];
+    flutterViewController.launchEngine(
+      withAssetsPath: assets,
+      commandLineArguments: arguments)
+
+    super.awakeFromNib()
+  }
+}
+

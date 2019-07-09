@@ -10,17 +10,33 @@ dependencies:
   watcher: ^0.9.7+10
   lottie_flutter: ^0.2.0
   spritewidget: ^0.9.17
-  flare_flutter: ^1.0.11
-  nima: ^1.0.2
+  flare_flutter: # https://github.com/2d-inc/Flare-Flutter/issues/75
+    git:
+      url: git://github.com/2d-inc/Flare-Flutter.git
+      ref: 307d63f824042d61059edf1cec54b96789625d97
+      path: flare_flutter
+  nima: # https://github.com/2d-inc/Flare-Flutter/issues/75
+    git:
+      url: git://github.com/truongsinh/Nima-Flutter.git
+      ref: bc965f52b60d7903dc7693dbe3a8037088c2a03b
 
 
   # Desktop embedder plugins.
   color_panel:
-    path: ../../flutter-desktop-embedding/plugins/color_panel
+    git:
+      url: git://github.com/google/flutter-desktop-embedding.git
+      ref: 1678518f00d3eab88b3afe44f0d13a52336cbbdf
+      path: plugins/color_panel
   file_chooser:
-    path: ../../flutter-desktop-embedding/plugins/file_chooser
+    git:
+      url: git://github.com/google/flutter-desktop-embedding.git
+      ref: 1678518f00d3eab88b3afe44f0d13a52336cbbdf
+      path: plugins/file_chooser
   menubar:
-    path: ../../flutter-desktop-embedding/plugins/menubar
+    git:
+      url: git://github.com/google/flutter-desktop-embedding.git
+      ref: 1678518f00d3eab88b3afe44f0d13a52336cbbdf
+      path: plugins/menubar
 
 dev_dependencies:
   flutter_test:

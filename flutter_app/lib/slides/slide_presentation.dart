@@ -41,13 +41,13 @@ class _SlidePresentationState extends State<SlidePresentation>
       duration: Duration(milliseconds: 250),
     );
 
-    MethodChannel('FlutterSlides:CustomPlugin', const JSONMethodCodec())
-        .invokeMethod('get')
-        .then((result) {
-      if (result != null) {
-        FlutterSlidesModel().loadSlidesData(result);
-      }
-    });
+    // MethodChannel('FlutterSlides:CustomPlugin', const JSONMethodCodec())
+    //     .invokeMethod('get')
+    //     .then((result) {
+    //   if (result != null) {
+    //     FlutterSlidesModel().loadSlidesData(result);
+    //   }
+    // });
   }
 
   @override
@@ -290,6 +290,13 @@ class _SlidePresentationState extends State<SlidePresentation>
               listTapAllowed = false;
             }
             break;
+          case RawKeyEventDataMacOs:
+            final RawKeyEventDataMacOs data = event.data;
+            upKeyCode = data.keyCode;
+            if (upKeyCode == _lisTapKeycode) {
+              listTapAllowed = false;
+            }
+            break;
           default:
             throw new Exception('Unsupported platform');
         }
@@ -303,6 +310,26 @@ class _SlidePresentationState extends State<SlidePresentation>
       case RawKeyEventDataAndroid:
         final RawKeyEventDataAndroid data = event.data;
         keyCode = data.keyCode;
+        if (keyCode == 33) {
+          _slideListController?.reverse();
+        } else if (keyCode == 49) {
+          _advancePresentation(model);
+        } else if (keyCode == 30) {
+          _slideListController?.forward();
+        } else if (keyCode == 123) {
+          // tapped left
+          _reversePresentation(model);
+        } else if (keyCode == 124) {
+          _advancePresentation(model);
+        } else if (keyCode == _lisTapKeycode) {
+          listTapAllowed = true;
+        }
+        break;
+      // @todo: duplicate code
+      case RawKeyEventDataMacOs:
+        final RawKeyEventDataMacOs data = event.data;
+        keyCode = data.keyCode;
+        print(keyCode);
         if (keyCode == 33) {
           _slideListController?.reverse();
         } else if (keyCode == 49) {
