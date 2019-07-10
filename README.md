@@ -23,7 +23,22 @@ For more details on the [presentation file structure](https://github.com/flutter
 - XCode 10 or higher
 
 **As of 2019-07-09**
-- Working with flutter v1.7.8+
+- Working with flutter `v1.7.8+hotfix.3` (framework revision b712a172f9). Even though `v1.7.8+hotfix.3` is the
+current version of `stable` channel, running Flutter Desktop Embedding (FDE) on `stable` channel is not yet supported. Thus you should point directly to the known version of Flutter by running `flutter version 1.7.8+hotfix.3`. This should be the result of `flutter doctor`, notice `Channel unknown`
+
+```
+Doctor summary (to see all details, run flutter doctor -v):
+[✓] Flutter (Channel unknown, v1.7.8+hotfix.3, on Mac OS X 10.14.5 18F132, locale en-VN)
+[✓] Android toolchain - develop for Android devices (Android SDK version 28.0.3)
+[✓] Xcode - develop for iOS and macOS (Xcode 10.2.1)
+[✓] iOS tools - develop for iOS devices
+[✓] Chrome - develop for the web
+[✓] Android Studio (version 3.4)
+[✓] VS Code (version 1.36.0)
+[✓] Connected device (2 available)
+
+• No issues found!
+```
 
 ### Running
 Change your dir to `flutter_app` and run `flutter run`.
