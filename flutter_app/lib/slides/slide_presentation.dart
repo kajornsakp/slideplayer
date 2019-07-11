@@ -41,13 +41,13 @@ class _SlidePresentationState extends State<SlidePresentation>
       duration: Duration(milliseconds: 250),
     );
 
-    // MethodChannel('FlutterSlides:CustomPlugin', const JSONMethodCodec())
-    //     .invokeMethod('get')
-    //     .then((result) {
-    //   if (result != null) {
-    //     FlutterSlidesModel().loadSlidesData(result);
-    //   }
-    // });
+    MethodChannel('FlutterSlides:CustomPlugin', const JSONMethodCodec())
+        .invokeMethod('get')
+        .then((result) {
+      if (result != null) {
+        FlutterSlidesModel().loadSlidesData(result);
+      }
+    });
   }
 
   @override

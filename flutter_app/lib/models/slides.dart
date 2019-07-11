@@ -101,8 +101,8 @@ class FlutterSlidesModel extends Model {
       }
       loadedSlides.slides = slideList;
       loadedSlides.notifyListeners();
-      // MethodChannel('FlutterSlides:CustomPlugin', const JSONMethodCodec())
-      //     .invokeMethod('set', filePath);
+      MethodChannel('FlutterSlides:CustomPlugin', const JSONMethodCodec())
+          .invokeMethod('set', filePath);
     } catch (e) {
       print("Error loading slides file: $e");
     }

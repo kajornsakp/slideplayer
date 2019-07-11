@@ -20,6 +20,7 @@ class FlutterSlides: NSWindow {
 
   override func awakeFromNib() {
     RegisterGeneratedPlugins(registry: flutterViewController)
+    RecentFilesPlugin.register(with: flutterViewController.registrar(forPlugin: "RecentFilesPlugin"))
 
     let assets = NSURL.fileURL(withPath: "flutter_assets", relativeTo: Bundle.main.resourceURL)
     var arguments: [String] = [];
