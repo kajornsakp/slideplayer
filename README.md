@@ -65,10 +65,10 @@ Once it's running, you can open the file `flutter_live.json` in the `example_pre
 - `z + click` on the slide
    
 **To present fullscreen**
-- (NOT currently working) `cmd + ctl + F`
+- `cmd + ctl + F`
 - or, select the green "full screen" button in the upper left of the window
    
 **To leave fullscreen**
-- (NOT currently working) `cmd + ctl + F`
+- `cmd + ctl + F`
 - or, move your cursor to the top of the screen and tap the green button in upper left
 
