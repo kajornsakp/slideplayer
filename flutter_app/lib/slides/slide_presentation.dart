@@ -303,7 +303,6 @@ class _SlidePresentationState extends State<SlidePresentation>
       case RawKeyEventDataMacOs:
         final RawKeyEventDataMacOs data = event.data;
         keyCode = data.keyCode;
-        print(keyCode);
         if (keyCode == 33) {
           _slideListController?.reverse();
         } else if (keyCode == 49) {
