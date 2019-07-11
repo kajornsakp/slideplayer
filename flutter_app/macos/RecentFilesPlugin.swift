@@ -18,7 +18,7 @@ import FlutterMacOS
 class RecentFilesPlugin : NSObject, FlutterPlugin {
   private let channel: FlutterMethodChannel
   static func register(with registrar: FlutterPluginRegistrar) {
-    
+  
     let channel = FlutterMethodChannel(name: "FlutterSlides:CustomPlugin",
                                        binaryMessenger: registrar.messenger,
                                        codec: FlutterJSONMethodCodec.sharedInstance())
