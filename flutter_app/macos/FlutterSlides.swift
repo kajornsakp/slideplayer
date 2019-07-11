@@ -15,7 +15,7 @@
 import Cocoa
 import FlutterMacOS
 
-class ExampleWindow: NSWindow {
+class FlutterSlides: NSWindow {
   @IBOutlet weak var flutterViewController: FLEViewController!
 
   override func awakeFromNib() {
