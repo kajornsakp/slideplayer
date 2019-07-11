@@ -283,13 +283,6 @@ class _SlidePresentationState extends State<SlidePresentation>
       case RawKeyUpEvent:
         int upKeyCode;
         switch (event.data.runtimeType) {
-          case RawKeyEventDataAndroid:
-            final RawKeyEventDataAndroid data = event.data;
-            upKeyCode = data.keyCode;
-            if (upKeyCode == _lisTapKeycode) {
-              listTapAllowed = false;
-            }
-            break;
           case RawKeyEventDataMacOs:
             final RawKeyEventDataMacOs data = event.data;
             upKeyCode = data.keyCode;
@@ -307,25 +300,6 @@ class _SlidePresentationState extends State<SlidePresentation>
 
     int keyCode;
     switch (event.data.runtimeType) {
-      case RawKeyEventDataAndroid:
-        final RawKeyEventDataAndroid data = event.data;
-        keyCode = data.keyCode;
-        if (keyCode == 33) {
-          _slideListController?.reverse();
-        } else if (keyCode == 49) {
-          _advancePresentation(model);
-        } else if (keyCode == 30) {
-          _slideListController?.forward();
-        } else if (keyCode == 123) {
-          // tapped left
-          _reversePresentation(model);
-        } else if (keyCode == 124) {
-          _advancePresentation(model);
-        } else if (keyCode == _lisTapKeycode) {
-          listTapAllowed = true;
-        }
-        break;
-      // @todo: duplicate code
       case RawKeyEventDataMacOs:
         final RawKeyEventDataMacOs data = event.data;
         keyCode = data.keyCode;
