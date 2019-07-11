@@ -18,11 +18,6 @@ dependencies:
 
 
   # Desktop embedder plugins.
-  color_panel:
-    git:
-      url: git://github.com/google/flutter-desktop-embedding.git
-      ref: 1678518f00d3eab88b3afe44f0d13a52336cbbdf
-      path: plugins/color_panel
   file_chooser:
     git:
       url: git://github.com/google/flutter-desktop-embedding.git
