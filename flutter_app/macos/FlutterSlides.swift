@@ -24,6 +24,9 @@ class FlutterSlides: NSWindow {
 
     let assets = NSURL.fileURL(withPath: "flutter_assets", relativeTo: Bundle.main.resourceURL)
     var arguments: [String] = [];
+    #if !DEBUG	
+      arguments.append("--disable-dart-asserts");	
+    #endif
     flutterViewController.launchEngine(
       withAssetsPath: assets,
       commandLineArguments: arguments)
