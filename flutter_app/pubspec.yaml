@@ -11,11 +11,7 @@ dependencies:
   lottie_flutter: ^0.2.0
   spritewidget: ^0.9.17
   flare_flutter: ^1.5.4
-  nima: # https://github.com/2d-inc/Nima-Flutter/pull/16
-    git:
-      url: git://github.com/truongsinh/Nima-Flutter.git
-      ref: bc965f52b60d7903dc7693dbe3a8037088c2a03b
-
+  nima: ^1.0.4
 
   # Desktop embedder plugins.
   file_chooser:
