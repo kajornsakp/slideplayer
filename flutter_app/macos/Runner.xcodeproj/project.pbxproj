@@ -477,7 +477,7 @@
 				INFOPLIST_FILE = Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vgventures.flutterslides;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = FlutterSlides;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
@@ -499,7 +499,7 @@
 				INFOPLIST_FILE = Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vgventures.flutterslides;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = FlutterSlides;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
