@@ -19,6 +19,9 @@ class FlutterSlides: NSWindow {
   @IBOutlet weak var flutterViewController: FLEViewController!
 
   override func awakeFromNib() {
+    minSize.width = 400.0
+    minSize.height = 400.0
+
     RegisterGeneratedPlugins(registry: flutterViewController)
     RecentFilesPlugin.register(with: flutterViewController.registrar(forPlugin: "RecentFilesPlugin"))
 
