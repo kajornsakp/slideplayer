@@ -13,40 +13,11 @@
 // limitations under the License.
 
 import Cocoa
+import FlutterMacOS
 
-class FlutterWindow: NSWindow {
-  
-  @IBOutlet weak var flutterViewController: FLEViewController!
-
-  override func awakeFromNib() {
-    minSize.width = 400.0
-    minSize.height = 400.0
-    
-    FLEColorPanelPlugin.register(
-      with: flutterViewController.registrar(forPlugin: "FLEColorPanelPlugin"))
-    FLEFileChooserPlugin.register(
-      with: flutterViewController.registrar(forPlugin: "FLEFileChooserPlugin"))
-    FLEMenubarPlugin.register(
-      with: flutterViewController.registrar(forPlugin: "FLEMenubarPlugin"))
-    RecentFilesPlugin.register(
-      with: flutterViewController.registrar(forPlugin: "RecentFilesPlugin"))
-
-    let assets = NSURL.fileURL(withPath: "flutter_assets", relativeTo: Bundle.main.resourceURL)
-    var arguments: [String] = [];
-    #if !DEBUG
-      arguments.append("--disable-dart-asserts");
-    #endif
-    flutterViewController.launchEngine(
-      withAssetsPath: assets,
-      commandLineArguments: arguments)
-
-    super.awakeFromNib()
-  }
-}
-
-class RecentFilesPlugin : NSObject, FLEPlugin {
+class RecentFilesPlugin : NSObject, FlutterPlugin {
   private let channel: FlutterMethodChannel
-  static func register(with registrar: FLEPluginRegistrar) {
+  static func register(with registrar: FlutterPluginRegistrar) {
   
     let channel = FlutterMethodChannel(name: "FlutterSlides:CustomPlugin",
                                        binaryMessenger: registrar.messenger,

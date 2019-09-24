@@ -20,36 +20,11 @@ For more details on the [presentation file structure](https://github.com/flutter
 ## Building 
 
 ### Requirements
-- XCode 10 or higher
-- Flutter tracking a recent version, preferably the Master branch ([Why?](https://github.com/google/flutter-desktop-embedding/blob/master/library/README.md#Caveats))
-
-**Flutter Desktop Embedding is constantly evolving, and you may need to tinker with your FDE checkout or Flutter version to get it running.  Please see the FDE repo for further information.**
-
-**As of March 28th, 2019**
-- Last FDE commit working on the Flutter stable branch (1.2.1): [306773e](https://github.com/google/flutter-desktop-embedding/commit/306773e5e429f299eaaf1867546bcbd7a7af5dab)
-- Flutter checkout required for the most recent version of FDE(currently [1ca25dc](https://github.com/google/flutter-desktop-embedding/commit/1ca25dc203a94f81202c86a3014aca69db817e55)): [dd23be3](https://github.com/flutter/flutter/commit/dd23be3936272b974709222af1a8309ab65244cc)
-
-
-### Setting Up
-
-The tooling and build infrastructure for this project requires that you have
-a Flutter tree and Flutter Desktop Embedding in the same parent directory as the clone 
-of this project:
-
-```
-<parent dir>
-  ├─ flutter (from http://github.com/flutter/flutter)
-  ├─ flutter-desktop-embedding (from https://github.com/google/flutter-desktop-embedding)
-  └─ flutter_slides (from https://github.com/flutter/slideplayer)
-```
-
-Alternately, you can place a `.flutter_location_config` file in the directory
-containing flutter-desktop-embedding, containing a path to the Flutter tree to
-use, if you prefer not to have the Flutter tree next to flutter-desktop-embedding.
+- Flutter version `v1.7.8+hotfix.3`, but not on the `stable` channel. Older or newer versions of Flutter are likely to be incompatible. Run `flutter version 1.7.8+hotfix.3` to check out a compatible version.
+- Ensure that the Xcode section of `flutter doctor` does not list any issues with the version of Flutter above.
 
 ### Running
-Open `FlutterSlides.xcodeproj` under macos, and build and run the `Flutter Slides` target.
-If you happen to get a build error on your first run, try cleaning and running again.
+Change your dir to `flutter_app` and run `flutter run`.
   
 Once it's running, you can open the file `flutter_live.json` in the `example_presentation` folder of the root of the project as a sample.
 
