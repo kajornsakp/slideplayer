@@ -27,11 +27,11 @@ dependencies:
       url: git://github.com/google/flutter-desktop-embedding.git
       ref: 403355819d784ab51af55e5de556de03618996ba
       path: plugins/menubar
-  shared_preferences_fde:
-    git:
-      url: git://github.com/google/flutter-desktop-embedding.git
-      ref: 403355819d784ab51af55e5de556de03618996ba
-      path: plugins/flutter_plugins/shared_preferences_fde
+#  shared_preferences_fde:
+#    git:
+#      url: git://github.com/google/flutter-desktop-embedding.git
+#      ref: 403355819d784ab51af55e5de556de03618996ba
+#      path: plugins/flutter_plugins/shared_preferences_fde
 
   # Flutter plugins
   shared_preferences: ^0.5.3+4

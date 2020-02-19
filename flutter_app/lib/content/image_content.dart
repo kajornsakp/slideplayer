@@ -9,12 +9,14 @@ class ImageContent extends StatelessWidget {
   final String filePath;
   final BoxFit fit;
   final bool evict;
+  final double scale;
 
   ImageContent({Key key, Map contentMap})
       : this.assetPath = contentMap['asset'],
         this.filePath = contentMap['file'],
         this.fit = ImageUtils.boxFitFromString(contentMap['fit']),
         this.evict = contentMap['evict'] ?? false,
+        this.scale = contentMap['scale'] ?? 1.0,
         super(key: key);
 
   @override
@@ -23,7 +25,7 @@ class ImageContent extends StatelessWidget {
       if (evict) {
         Image.asset(assetPath).image.evict();
       }
-      final Image image = Image.asset(assetPath, fit: fit);
+      final Image image = Image.asset(assetPath, fit: fit, scale: scale);
       return image;
     } else {
       final root = loadedSlides.externalFilesRoot;
@@ -33,6 +35,7 @@ class ImageContent extends StatelessWidget {
       final Image image = Image.file(
         File('$root/$filePath'),
         fit: fit,
+        scale: scale,
       );
       return image;
     }

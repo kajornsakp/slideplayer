@@ -1,4 +1,5 @@
 import 'dart:math' as math;
+import 'package:flutter/painting.dart';
 import 'package:flutter_slides/models/normalization_multipliers.dart';
 import 'package:flutter/material.dart';
 
@@ -36,6 +37,7 @@ class _MainTitleContentState extends State<MainTitleContent>
   Animation<double> _flutterLiveGlitchAnimation;
 
   static const _defaultFontSize = 240.0;
+  static const _bannerFontSize = 120.0;
   int _wordIndex = 0;
 
   @override
@@ -150,28 +152,90 @@ class _MainTitleContentState extends State<MainTitleContent>
                 fit: BoxFit.scaleDown,
                 child: Container(
                   padding: const EdgeInsets.only(
-                      left: 35.0, top: 75.0, right: 30.0, bottom: 20.0),
+                      left: 15.0, top: 20.0, right: 15.0, bottom: 20.0),
                   color: Color(0xFF1B364F),
                   child: RichText(
                     maxLines: 2,
+                    textAlign: TextAlign.center,
                     text: TextSpan(
                       children: [
                         TextSpan(
-                            text: 'Flutter\nLive',
+                            text: 'TECH@',
                             style: TextStyle().copyWith(
                                 color: Colors.white,
                                 height: widget.lineHeight,
-                                fontFamily: 'GoogleSans',
-                                fontSize: _defaultFontSize *
+                                fontFamily: 'Oduda',
+                                fontSize: 200 *
                                     _flutterLiveScaleTransition.value)),
+                        TextSpan(text: "\n"),
                         TextSpan(
-                            text: ' ‘18',
+                            text: 'agoda',
                             style: TextStyle().copyWith(
-                                color: Color(0xFF13B9FD),
+                                color: Colors.white,
                                 height: widget.lineHeight,
-                                fontFamily: 'GoogleSans',
-                                fontSize: _defaultFontSize *
+                                fontFamily: 'Oduda',
+                                fontSize: _bannerFontSize *
                                     _flutterLiveScaleTransition.value)),
+                        WidgetSpan(child: SizedBox(width: 20)),
+                        WidgetSpan(
+                          alignment: PlaceholderAlignment.bottom,
+                          child: Container(
+                            width: 60,
+                            height: 60,
+                            decoration: BoxDecoration(
+                              color: Color(0xffff2938),
+                              shape: BoxShape.circle
+                            ),
+                          )
+                        ),
+                        WidgetSpan(child: SizedBox(width: 20)),
+                        WidgetSpan(
+                            alignment: PlaceholderAlignment.bottom,
+                            child: Container(
+                              width: 60,
+                              height: 60,
+                              decoration: BoxDecoration(
+                                  color: Color(0xfffdb812),
+                                  shape: BoxShape.circle
+                              ),
+                            )
+                        ),
+                        WidgetSpan(child: SizedBox(width: 20)),
+                        WidgetSpan(
+                            alignment: PlaceholderAlignment.bottom,
+                            child: Container(
+                              width: 60,
+                              height: 60,
+                              decoration: BoxDecoration(
+                                  color: Color(0xff00b057),
+                                  shape: BoxShape.circle
+                              ),
+                            )
+                        ),
+                        WidgetSpan(child: SizedBox(width: 20)),
+                        WidgetSpan(
+                            alignment: PlaceholderAlignment.bottom,
+                            child: Container(
+                              width: 60,
+                              height: 60,
+                              decoration: BoxDecoration(
+                                  color: Color(0xffaf38b1),
+                                  shape: BoxShape.circle
+                              ),
+                            )
+                        ),
+                        WidgetSpan(child: SizedBox(width: 20)),
+                        WidgetSpan(
+                            alignment: PlaceholderAlignment.bottom,
+                            child: Container(
+                              width: 60,
+                              height: 60,
+                              decoration: BoxDecoration(
+                                  color: Color(0xff00aae0),
+                                  shape: BoxShape.circle
+                              ),
+                            )
+                        )
                       ],
                     ),
                   ),
@@ -269,7 +333,7 @@ class _WelcomeCellState extends State<WelcomeCell>
         parent: _animationController,
         curve: Interval(0.35, 0.352, curve: SawTooth(1))));
     final flutterTextWidget = Text(
-      'Flutter',
+      'Tech@Agoda',
       maxLines: 1,
       overflow: TextOverflow.fade,
       style: TextStyle().copyWith(

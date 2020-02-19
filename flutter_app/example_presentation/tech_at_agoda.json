@@ -1,0 +1,2289 @@
+{
+  "slide_width": 1920.0,
+  "slide_height": 1080.0,
+  "font_scale_factor": 1920.0,
+  "project_bg_color": "0xFFF0F0F0",
+  "project_slide_list_bg_color": "0xFFDDDDDD",
+  "project_slide_list_highlight_color": "0xFF40C4FF",
+  "show_debug_containers": false,
+  "animate_slide_transitions": false,
+  "auto_advance": false,
+  "auto_advance_duration_millis": 500,
+  "slides": [
+    {
+      "_comment": "opening screen",
+      "bg_color": "#FFFFFFff",
+      "content": [
+        {
+          "type": "main_title_slide",
+          "x": 0.0,
+          "y": 0.0,
+          "height": 1080.0,
+          "width": 1920.0,
+          "scroll_to": 40000.0,
+          "line_height": 1.0,
+          "word_list": [
+            "Welcome",
+            "Flutter",
+            "Workshop",
+            "180220"
+          ]
+        }
+      ]
+    },
+    {
+      "_comment": "what is flutter",
+      "bg_color": "#FFFFFFFF",
+      "content": [
+        {
+          "type": "image",
+          "x": 480.0,
+          "y": 200.0,
+          "fit": "fit",
+          "height": 540.0,
+          "width": 960.0,
+          "file": "images/flutter_introduction/flutter_lockup.png"
+        },
+        {
+          "type": "label",
+          "text": "Flutter and the related logo are trademarks of Google LLC. We are not endorsed by or affiliated with Google LLC.",
+          "font_size": 24.0,
+          "font_color": "#1B364Fff",
+          "x": 0.0,
+          "y": 1020.0,
+          "height": 60.0,
+          "width": 1920.0
+        }
+      ]
+    },
+    {
+      "_comment": "example design",
+      "bg_color": "#FFFFFFff",
+      "content": [
+        {
+          "type": "rect",
+          "x": 960.0,
+          "y": 0.0,
+          "height": 1080.0,
+          "width": 960.0,
+          "fill": "#FFFFFFff"
+        },
+        {
+          "type": "label",
+          "text": "Google's\nUI Toolkit",
+          "font_size": 72.0,
+          "font_color": "#1B364Fff",
+          "align": "centerLeft",
+          "line_height": 1.2,
+          "letter_spacing": -1.44,
+          "x": 200.0,
+          "y": 454.0,
+          "height": 186.0,
+          "width": 608.0
+        },
+        {
+          "type": "image",
+          "x": 800.0,
+          "y": 99.0,
+          "height": 870.0,
+          "width": 402.0,
+          "file": "images/flutter_introduction/ios_example.gif"
+        },
+        {
+          "type": "image",
+          "x": 764.0,
+          "y": 65.0,
+          "height": 936.0,
+          "width": 474.0,
+          "file": "images/misc/iphone_x_shell.webp"
+        },
+        {
+          "type": "image",
+          "x": 1266.0,
+          "y": -20.0,
+          "height": 1123.0,
+          "width": 474.0,
+          "file": "images/flutter_introduction/android_frame.png"
+        },
+        {
+          "type": "image",
+          "x": 1302.0,
+          "y": 99.0,
+          "height": 870.0,
+          "width": 402.0,
+          "file": "images/flutter_introduction/android_example.gif"
+        }
+      ]
+    },
+    {
+      "_comment": "powered by dart",
+      "bg_color": "#FFFFFFff",
+      "content": [
+        {
+          "type": "label",
+          "text": "Powered by",
+          "font_size": 72.0,
+          "font_color": "#1B364Fff",
+          "align": "centerLeft",
+          "line_height": 1.2,
+          "letter_spacing": -1.44,
+          "x": 200.0,
+          "y": 454.0,
+          "height": 186.0,
+          "width": 608.0
+        },
+        {
+          "type": "image",
+          "x": 800.0,
+          "y": 254.0,
+          "fit": "contain",
+          "height": 540.0,
+          "width": 960.0,
+          "evict": true,
+          "file": "images/flutter_introduction/dart_lockup.png"
+        }
+      ]
+    },
+    {
+      "_comment": "what is dart",
+      "bg_color": "#FFFFFFff",
+      "content": [
+        {
+          "type": "label",
+          "text": "Dart?",
+          "font_size": 240.0,
+          "font_color": "#1B364Fff",
+          "align": "center",
+          "line_height": 1.2,
+          "letter_spacing": -1.44,
+          "x": 0.0,
+          "y": 0.0,
+          "height": 1080.0,
+          "width": 1920.0,
+          "animation": {
+            "scale_start": 0.0,
+            "scale_end": 1.0,
+            "duration_in_milliseconds": 500
+          }
+        }
+      ]
+    },
+    {
+      "_comment": "example dart lang",
+      "bg_color": "#FFFFFFff",
+      "content": [
+        {
+          "type": "label",
+          "text": "Dart lang",
+          "font_size": 72.0,
+          "font_color": "#1B364Fff",
+          "align": "center",
+          "line_ผheight": 1.2,
+          "letter_spacing": -1.44,
+          "x": 0.0,
+          "y": 0.0,
+          "height": 250,
+          "width": 450.0
+        },
+        {
+          "fill": "#BFE6F355",
+          "type": "rect",
+          "height": 900,
+          "width": 800,
+          "x": 80,
+          "y": 180
+        },
+        {
+          "type": "label",
+          "text": "import 'package:flutter/material.dart';\n\nvoid main() => runApp(MyApp());\n\nclass MyApp extends StatelessWidget {\n  @override\n  Widget build(BuildContext context) {\n    return MaterialApp(\n      title: 'Welcome to Flutter',\n      home: Scaffold(\n        appBar: AppBar(\n          title: Text('Welcome to Flutter'),\n        ),\n        body: Center(\n          child: Text('Hello World'),\n        ),\n      ),\n    );\n  }\n}",
+          "font_size": 36.0,
+          "font_color": "#1B364Fff",
+          "align": "center",
+          "line_height": 1.2,
+          "letter_spacing": -1.44,
+          "x": 80.0,
+          "y": 200.0,
+          "height": 880,
+          "width": 600.0
+        },
+        {
+          "type": "image",
+          "x": 1266.0,
+          "y": -20.0,
+          "height": 1123.0,
+          "width": 474.0,
+          "file": "images/flutter_introduction/android_frame.png"
+        },
+        {
+          "type": "dart_example",
+          "x": 1300,
+          "y": 180.0,
+          "height": 710.0,
+          "width": 400.0
+        }
+      ]
+    },
+    {
+      "_comment": "flutter pillars",
+      "advancement_count": 5,
+      "content": [
+        {
+          "type": "flutter_pillars",
+          "x": 0.0,
+          "y": 0.0,
+          "height": 1080.0,
+          "width": 1920.0,
+          "debug_overflow": false,
+          "debug_lock": false,
+          "debug_locked_controller_position": 1.0,
+          "debug_locked_stage_value": 3,
+          "title_font_size_min": 100.0,
+          "title_font_size_max": 120.0,
+          "subtitle_font_size_min": 40.0,
+          "subtitle_font_size_max": 76.0,
+          "subtile_padding_top": 20.0,
+          "orb_size": 500.0,
+          "orb_image_path": "/images/pillars_screen/flutter_pillars_logo.webp",
+          "controller_duration": 750,
+          "beautiful": {
+            "background_color": "0xFFEFEFEF",
+            "title_color": "0xFF1B364F",
+            "subtitle_color": "0xFF1B364F",
+            "image_shell_path": "images/pillars_screen/iphone_xr_shell.webp",
+            "image_innards_path": "images/pillars_screen/beautiful_inner_screen.webp",
+            "title": "Beautiful",
+            "subtitle": "No compromises for\nyour designers",
+            "inner_bg_color": "0x00000000",
+            "background_positions": {
+              "collapsed": {
+                "top": 0.0,
+                "left": 0.0
+              },
+              "beautiful": {
+                "top": 0.0,
+                "left": 0.0
+              },
+              "fast": {
+                "top": -1080.0,
+                "left": 0.0
+              },
+              "productive": {
+                "top": 0.0,
+                "left": -1920.0
+              },
+              "open": {
+                "top": -1080.0,
+                "left": -1920.0
+              }
+            },
+            "title_positions": {
+              "collapsed": {
+                "top": 200.0,
+                "left": 250.0
+              },
+              "beautiful": {
+                "top": 100.0,
+                "left": -100.0
+              },
+              "fast": {
+                "top": -880.0,
+                "left": 250.0
+              },
+              "productive": {
+                "top": 200.0,
+                "left": -1670.0
+              },
+              "open": {
+                "top": -880.0,
+                "left": -1670.0
+              }
+            },
+            "shell_image_offset": {
+              "top": 0.0,
+              "left": 0.0
+            },
+            "shell_image": {
+              "top": 70.0,
+              "left": 720.0,
+              "height": 970.0,
+              "width": 500.0
+            },
+            "inner_image": {
+              "top": 48.0,
+              "left": 52.0,
+              "height": 865.0,
+              "width": 396.0
+            }
+          },
+          "fast": {
+            "background_color": "0xFF0175C2",
+            "title_color": "0xFFFFFFFF",
+            "subtitle_color": "0xFFFFFFFF",
+            "image_shell_path": "images/pillars_screen/iphone_xr_shell.webp",
+            "image_innards_path": "images/pillars_screen/fast_inner_screen.webp",
+            "title": "Fast",
+            "subtitle": "Take the speed limiter\noff your app",
+            "inner_bg_color": "0x00000000",
+            "background_positions": {
+              "collapsed": {
+                "top": 540.0,
+                "left": 0.0
+              },
+              "beautiful": {
+                "top": 540.0,
+                "left": 0.0
+              },
+              "fast": {
+                "top": -540.0,
+                "left": 0.0
+              },
+              "productive": {
+                "top": 540.0,
+                "left": -1920.0
+              },
+              "open": {
+                "top": -540.0,
+                "left": -1920.0
+              }
+            },
+            "title_positions": {
+              "collapsed": {
+                "top": 750.0,
+                "left": 350.0
+              },
+              "beautiful": {
+                "top": 750.0,
+                "left": 350.0
+              },
+              "fast": {
+                "top": -442.0,
+                "left": -195.0
+              },
+              "productive": {
+                "top": 750.0,
+                "left": -1520.0
+              },
+              "open": {
+                "top": -350.0,
+                "left": -1520.0
+              }
+            },
+            "shell_image_offset": {
+              "top": 580.0,
+              "left": 0.0
+            },
+            "shell_image": {
+              "top": 70.0,
+              "left": 720.0,
+              "height": 970.0,
+              "width": 500.0
+            },
+            "inner_image": {
+              "top": 48.0,
+              "left": 52.0,
+              "height": 865.0,
+              "width": 396.0
+            }
+          },
+          "productive": {
+            "background_color": "0xFF1B364F",
+            "title_color": "0xFFFFFFFF",
+            "subtitle_color": "0xFFFFFFFF",
+            "image_shell_path": "images/pillars_screen/productive_shell.webp",
+            "image_innards_path": "images/pillars_screen/productive_inner_screen.gif",
+            "inner_bg_color": "0xFF4444444",
+            "title": "Productive",
+            "subtitle": "Develop while your\napp is running",
+            "background_positions": {
+              "collapsed": {
+                "top": 0.0,
+                "left": 960.0
+              },
+              "beautiful": {
+                "top": 0.0,
+                "left": 960.0
+              },
+              "fast": {
+                "top": -1080.0,
+                "left": 960.0
+              },
+              "productive": {
+                "top": 0.0,
+                "left": -960.0
+              },
+              "open": {
+                "top": -1080.0,
+                "left": -960.0
+              }
+            },
+            "title_positions": {
+              "collapsed": {
+                "top": 190.0,
+                "left": 1205.0
+              },
+              "beautiful": {
+                "top": 190.0,
+                "left": 1210.0
+              },
+              "fast": {
+                "top": -890.0,
+                "left": 1210.0
+              },
+              "productive": {
+                "top": 116.0,
+                "left": -1050.0
+              },
+              "open": {
+                "top": -890.0,
+                "left": -730.0
+              }
+            },
+            "shell_image_offset": {
+              "top": 0.0,
+              "left": 1250.0
+            },
+            "shell_image": {
+              "top": 140.0,
+              "left": 1190.0,
+              "width": 1373.0,
+              "height": 830.0
+            },
+            "inner_image": {
+              "top": 103.0,
+              "left": 220.0,
+              "width": 920.0,
+              "height": 560.0
+            }
+          },
+          "productive2": {
+            "innards_bg_color": "0xFF4444444",
+            "innards_bg": {
+              "top": 100.0,
+              "left": 222.0,
+              "width": 920.0,
+              "height": 560.0
+            }
+          },
+          "open": {
+            "background_color": "0xFFBFE6F3",
+            "title_color": "0xFF1B364F",
+            "subtitle_color": "0xFF1B364F",
+            "image_shell_path": "images/pillars_screen/open_shell.webp",
+            "image_innards_path": "images/pillars_screen/open_inner_screen.webp",
+            "title": "Open",
+            "subtitle": "Everything is free\nand open source",
+            "shell_on_top": false,
+            "shell_fit": "cover",
+            "inner_bg_color": "0x00000000",
+            "background_positions": {
+              "collapsed": {
+                "top": 540.0,
+                "left": 960.0
+              },
+              "beautiful": {
+                "top": 540.0,
+                "left": 960.0
+              },
+              "fast": {
+                "top": -540.0,
+                "left": 960.0
+              },
+              "productive": {
+                "top": 540.0,
+                "left": -960.0
+              },
+              "open": {
+                "top": -540.0,
+                "left": -960.0
+              }
+            },
+            "title_positions": {
+              "collapsed": {
+                "top": 750.0,
+                "left": 1320.0
+              },
+              "beautiful": {
+                "top": 730.0,
+                "left": 1320.0
+              },
+              "fast": {
+                "top": -360.0,
+                "left": 1320.0
+              },
+              "productive": {
+                "top": 730.0,
+                "left": -600.0
+              },
+              "open": {
+                "top": -448.0,
+                "left": -1165.0
+              }
+            },
+            "shell_image_offset": {
+              "top": 540.0,
+              "left": 1250.0
+            },
+            "shell_image": {
+              "top": 93.0,
+              "left": 800.0,
+              "width": 1217.0,
+              "height": 931.0
+            },
+            "inner_image": {
+              "top": 50.0,
+              "left": 50.0,
+              "width": 1125.0,
+              "height": 640.0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "_comment": "repo popularity",
+      "bg_color": "#FFFFFFff",
+      "content": [
+        {
+          "type": "image",
+          "x": 20.0,
+          "y": 20.0,
+          "height": 1040.0,
+          "width": 1880.0,
+          "file": "images/flutter_introduction/repo_compare.png"
+        }
+      ]
+    },
+    {
+      "_comment": "normal tools",
+      "bg_color": "#FFFFFFff",
+      "content": [
+        {
+          "type": "image",
+          "x": 600.0,
+          "y": 200.0,
+          "width": 250.0,
+          "height": 250.0,
+          "file": "images/flutter_introduction/androidstudio-logo.jpg"
+        },
+        {
+          "type": "image",
+          "x": 1000.0,
+          "y": 200.0,
+          "width": 250.0,
+          "height": 250.0,
+          "file": "images/flutter_introduction/xcode-logo.jpg"
+        },
+        {
+          "type": "image",
+          "x": 500.0,
+          "y": 500.0,
+          "width": 400.0,
+          "height": 400.0,
+          "file": "images/flutter_introduction/android-logo.png"
+        },
+        {
+          "type": "image",
+          "x": 1000.0,
+          "y": 600.0,
+          "width": 250.0,
+          "height": 250.0,
+          "file": "images/flutter_introduction/apple-logo.png"
+        }
+      ]
+    },
+    {
+      "_comment": "unified design",
+      "bg_color": "#FFFFFFff",
+      "content": [
+        {
+          "type": "image",
+          "x": 321.0,
+          "y": 86.0,
+          "height": 908.0,
+          "width": 544.0,
+          "file": "images/misc/android_ambig.webp",
+          "animation": {
+            "curve": "easeInOut",
+            "delay_in_milliseconds": 2000,
+            "duration_in_milliseconds": 1000,
+            "offset_x": 367.0
+          }
+        },
+        {
+          "type": "image",
+          "x": 1007.0,
+          "y": 86.0,
+          "height": 908.0,
+          "width": 544.0,
+          "file": "images/misc/ios_ambig.webp",
+          "animation": {
+            "curve": "easeInOut",
+            "delay_in_milliseconds": 2000,
+            "duration_in_milliseconds": 1000,
+            "offset_x": -319.0
+          }
+        },
+        {
+          "type": "image",
+          "x": 688.0,
+          "y": 86.0,
+          "height": 908.0,
+          "width": 544.0,
+          "file": "images/misc/ambiguous-device-ui.webp",
+          "animation": {
+            "curve": "easeInOut",
+            "delay_in_milliseconds": 5750,
+            "duration_in_milliseconds": 750,
+            "opacity_start": 0.0,
+            "opacity_end": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "_comment": "app delivery",
+      "bg_color": "#FFFFFFff",
+      "content": [
+        {
+          "type": "image",
+          "x": 760.0,
+          "y": 183.0,
+          "height": 836.0,
+          "width": 404.0,
+          "file": "images/misc/mobile_shipped.webp",
+          "fit": "contain",
+          "evict": true,
+          "animation": {
+            "curve": "easeInOut",
+            "delay_in_milliseconds": 1000,
+            "duration_in_milliseconds": 750,
+            "opacity_start": 0.0,
+            "opacity_end": 1.0,
+            "offset_x": 292.0,
+            "offset_y": 0.0
+          }
+        },
+        {
+          "type": "image",
+          "x": 760.0,
+          "y": 183.0,
+          "height": 836.0,
+          "width": 404.0,
+          "file": "images/misc/mobile_designed.webp",
+          "fit": "contain",
+          "evict": true,
+          "animation": {
+            "curve": "easeInOut",
+            "delay_in_milliseconds": 1000,
+            "duration_in_milliseconds": 750,
+            "offset_x": -299.0,
+            "offset_y": 0.0
+          }
+        },
+        {
+          "type": "label",
+          "text": "Shipped",
+          "font_size": 48.0,
+          "font_color": "#1B364Fff",
+          "line_height": 0.72,
+          "letter_spacing": -0.79,
+          "text_align": "center",
+          "align": "center",
+          "x": 821.0,
+          "y": 74.0,
+          "height": 81.0,
+          "width": 279.0,
+          "animation": {
+            "curve": "easeInOut",
+            "opacity_start": 0.0,
+            "opacity_end": 1.0,
+            "delay_in_milliseconds": 1000,
+            "duration_in_milliseconds": 750,
+            "offset_x": 290.0,
+            "offset_y": 0.0
+          }
+        },
+        {
+          "type": "label",
+          "text": "Design",
+          "font_size": 48.0,
+          "font_color": "#1B364Fff",
+          "line_height": 0.72,
+          "letter_spacing": -0.79,
+          "text_align": "center",
+          "align": "center",
+          "x": 821.0,
+          "y": 74.0,
+          "height": 81.0,
+          "width": 279.0,
+          "animation": {
+            "curve": "easeInOut",
+            "delay_in_milliseconds": 1000,
+            "duration_in_milliseconds": 750,
+            "offset_x": -290.0,
+            "offset_y": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "_comment": "custom typography",
+      "bg_color": "#FFFFFFff",
+      "content": [
+        {
+          "type": "rect",
+          "x": 960.0,
+          "y": 0.0,
+          "height": 1080.0,
+          "width": 960.0,
+          "fill": "#FFFFFFff"
+        },
+        {
+          "type": "label",
+          "text": "Custom\nTypography",
+          "font_size": 72.0,
+          "font_color": "#1B364Fff",
+          "align": "centerLeft",
+          "line_height": 0.9,
+          "letter_spacing": -1.44,
+          "x": 376.0,
+          "y": 454.0,
+          "height": 186.0,
+          "width": 608.0
+        },
+        {
+          "type": "image",
+          "x": 1077.0,
+          "y": 99.0,
+          "height": 870.0,
+          "width": 402.0,
+          "file": "images/misc/fortnightly.webp"
+        },
+        {
+          "type": "image",
+          "x": 1041.0,
+          "y": 65.0,
+          "height": 936.0,
+          "width": 474.0,
+          "file": "images/misc/iphone_x_shell.webp"
+        }
+      ]
+    },
+    {
+      "_comment": "material intro",
+      "bg_color": "#FFFFFFff",
+      "content": [
+        {
+          "type": "label",
+          "text": "Material Components",
+          "font_size": 120.0,
+          "font_color": "#1B364Fff",
+          "line_height": 0.9,
+          "letter_spacing": -1.44,
+          "text_align": "center",
+          "x": 0.0,
+          "y": 400.0,
+          "height": 261.0,
+          "width": 1920.0
+        },
+        {
+          "type": "label",
+          "text": "material.dart",
+          "font_size": 64.0,
+          "font_color": "#0175C2ff",
+          "font_family": "RobotoMono",
+          "line_height": 0.9,
+          "letter_spacing": -1.44,
+          "align": "center",
+          "x": 0.0,
+          "y": 619.0,
+          "height": 161.0,
+          "width": 1920.0
+        }
+      ]
+    },
+    {
+      "_comment": "material_gif",
+      "bg_color": "#FFFFFFff",
+      "content": [
+        {
+          "type": "image",
+          "fit": "contain",
+          "x": 0.0,
+          "y": 0.0,
+          "fit": "cover",
+          "height": 1080.0,
+          "width": 1920.0,
+          "evict": true,
+          "file": "images/misc/material_full_screen.webp"
+        }
+      ]
+    },
+    {
+      "_comment": "example material",
+      "bg_color": "#FFFFFFff",
+      "content": [
+        {
+          "type": "image",
+          "x": 726.0,
+          "y": -60.0,
+          "height": 1200.0,
+          "width": 520.0,
+          "file": "images/flutter_introduction/android_frame.png"
+        },
+        {
+          "type": "material_app_example",
+          "x": 765.0,
+          "y": 140.0,
+          "height": 780.0,
+          "width": 440.0
+        }
+      ]
+    },
+    {
+      "_comment": "cupertino",
+      "bg_color": "#FFFFFFff",
+      "content": [
+        {
+          "type": "label",
+          "text": "Cupertino",
+          "font_size": 120.0,
+          "font_color": "#1B364Fff",
+          "line_height": 0.9,
+          "letter_spacing": -1.44,
+          "text_align": "center",
+          "x": 0.0,
+          "y": 400.0,
+          "height": 261.0,
+          "width": 1920.0
+        },
+        {
+          "type": "label",
+          "text": "cupertino.dart",
+          "font_size": 64.0,
+          "font_color": "#0175C2ff",
+          "font_family": "RobotoMono",
+          "align": "center",
+          "x": 0.0,
+          "y": 619.0,
+          "height": 161.0,
+          "width": 1920.0
+        }
+      ]
+    },
+    {
+      "_comment": "example cupertino",
+      "bg_color": "#FFFFFFff",
+      "content": [
+        {
+          "type": "cupertino_app_example",
+          "x": 765.0,
+          "y": 100.0,
+          "height": 780.0,
+          "width": 440.0
+        },
+        {
+          "type": "image",
+          "x": 726.0,
+          "y": -60.0,
+          "height": 1200.0,
+          "width": 520.0,
+          "file": "images/flutter_introduction/ios_frame.png"
+        }
+      ]
+    },
+    {
+      "_comment": "Coding productive",
+      "bg_color": "#FFFFFFff",
+      "content": [
+        {
+          "type": "coding_rolodex_screen",
+          "x": 0.0,
+          "y": 0.0,
+          "height": 1080.0,
+          "width": 1920.0
+        }
+      ]
+    },
+    {
+      "_comment": "supported_platform",
+      "bg_color": "#FFFFFFFF",
+      "content": [
+        {
+          "type": "supported_platforms",
+          "x": 0.0,
+          "y": 0.0,
+          "height": 1080.0,
+          "width": 1920.0,
+          "default_page": 1,
+          "debug_colors": false,
+          "init_change_duration_millis": 800,
+          "page_change_duration_millis": 5000,
+          "page_change_animation_duration_millis": 1500,
+          "page_change_curve": "fastOutSlowIn",
+          "title_font_size_min": 38.0,
+          "title_font_size_max": 60.0,
+          "image_height_min": 225.0,
+          "image_height_max": 560.0,
+          "container_height_min": 400.0,
+          "container_height_max": 1080.0,
+          "viewport_fraction": 0.333,
+          "title_top_padding": 40.0,
+          "title_font_color": "0xFF52575B",
+          "cell_data": [
+            {
+              "title": "Chromebook",
+              "filepath": "images/supported_platforms/chrome.webp"
+            },
+            {
+              "title": "iPhone",
+              "filepath": "images/supported_platforms/iphone.webp"
+            },
+            {
+              "title": "Android",
+              "filepath": "images/supported_platforms/android.webp"
+            },
+            {
+              "title": "Raspberry Pi",
+              "filepath": "images/supported_platforms/raspberry pi.webp"
+            },
+            {
+              "title": "Mac",
+              "filepath": "images/supported_platforms/mac.webp"
+            },
+            {
+              "title": "Windows",
+              "filepath": "images/supported_platforms/windows.webp"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_comment": "Flutter demo",
+      "bg_color": "#FFFFFFff",
+      "content": [
+        {
+          "type": "label",
+          "text": "Demo",
+          "font_color": "#0175C2ff",
+          "font_size": 120.0,
+          "x": 0.0,
+          "y": 0.0,
+          "width": 1920.0,
+          "height": 1080.0
+        }
+      ]
+    },
+    {
+      "_comment": "Flutter architecture intro",
+      "bg_color": "#FFFFFFff",
+      "content": [
+        {
+          "type": "label",
+          "text": "Architecture",
+          "font_color": "#0175C2ff",
+          "font_size": 120.0,
+          "x": 0.0,
+          "y": 0.0,
+          "width": 1920.0,
+          "height": 1080.0
+        }
+      ]
+    },
+    {
+      "_comment": "Flutter architecture",
+      "bg_color": "#FFFFFFff",
+      "content": [
+        {
+          "type": "rect",
+          "fill": "#0175C2ff",
+          "x": 600.0,
+          "y": 300.0,
+          "width": 340.0,
+          "height": 60.0
+        },
+        {
+          "type": "label",
+          "text": "Material",
+          "font_color": "#FFFFFFff",
+          "font_size": 24.0,
+          "x": 600.0,
+          "y": 300.0,
+          "width": 340.0,
+          "height": 60.0
+        },
+        {
+          "type": "rect",
+          "fill": "#0175C2ff",
+          "x": 960.0,
+          "y": 300.0,
+          "width": 340.0,
+          "height": 60.0
+        },
+        {
+          "type": "label",
+          "text": "Cupertino",
+          "font_color": "#FFFFFFff",
+          "font_size": 24.0,
+          "x": 960.0,
+          "y": 300.0,
+          "width": 340.0,
+          "height": 60.0
+        },
+        {
+          "type": "rect",
+          "fill": "#0175C2ff",
+          "x": 600.0,
+          "y": 380.0,
+          "width": 700.0,
+          "height": 60.0
+        },
+        {
+          "type": "label",
+          "text": "Widgets",
+          "font_color": "#FFFFFFff",
+          "font_size": 24.0,
+          "x": 600.0,
+          "y": 380.0,
+          "width": 700.0,
+          "height": 60.0
+        },
+        {
+          "type": "rect",
+          "fill": "#0175C2ff",
+          "x": 600.0,
+          "y": 460.0,
+          "width": 700.0,
+          "height": 60.0
+        },
+        {
+          "type": "label",
+          "text": "Rendering",
+          "font_color": "#FFFFFFff",
+          "font_size": 24.0,
+          "x": 600.0,
+          "y": 460.0,
+          "width": 700.0,
+          "height": 60.0
+        },
+        {
+          "type": "rect",
+          "fill": "#0175C2ff",
+          "x": 600.0,
+          "y": 540.0,
+          "width": 200.0,
+          "height": 60.0
+        },
+        {
+          "type": "label",
+          "text": "Animation",
+          "font_color": "#FFFFFFff",
+          "font_size": 24.0,
+          "x": 600.0,
+          "y": 540.0,
+          "width": 200.0,
+          "height": 60.0
+        },
+        {
+          "type": "rect",
+          "fill": "#0175C2ff",
+          "x": 850.0,
+          "y": 540.0,
+          "width": 200.0,
+          "height": 60.0
+        },
+        {
+          "type": "label",
+          "text": "Painting",
+          "font_color": "#FFFFFFff",
+          "font_size": 24.0,
+          "x": 850.0,
+          "y": 540.0,
+          "width": 200.0,
+          "height": 60.0
+        },
+        {
+          "type": "rect",
+          "fill": "#0175C2ff",
+          "x": 1100.0,
+          "y": 540.0,
+          "width": 200.0,
+          "height": 60.0
+        },
+        {
+          "type": "label",
+          "text": "Gestures",
+          "font_color": "#FFFFFFff",
+          "font_size": 24.0,
+          "x": 1100.0,
+          "y": 540.0,
+          "width": 200.0,
+          "height": 60.0
+        },
+        {
+          "type": "rect",
+          "fill": "#0175C2ff",
+          "x": 600.0,
+          "y": 620.0,
+          "width": 700.0,
+          "height": 60.0
+        },
+        {
+          "type": "label",
+          "text": "Foundation",
+          "font_color": "#FFFFFFff",
+          "font_size": 24.0,
+          "x": 600.0,
+          "y": 620.0,
+          "width": 700.0,
+          "height": 60.0
+        },
+        {
+          "type": "rect",
+          "fill": "#5AC6F6FF",
+          "x": 600.0,
+          "y": 700.0,
+          "width": 200.0,
+          "height": 60.0
+        },
+        {
+          "type": "label",
+          "text": "Skia",
+          "font_color": "#FFFFFFff",
+          "font_size": 24.0,
+          "x": 600.0,
+          "y": 700.0,
+          "width": 200.0,
+          "height": 60.0
+        },
+        {
+          "type": "rect",
+          "fill": "#5AC6F6FF",
+          "x": 850.0,
+          "y": 700.0,
+          "width": 200.0,
+          "height": 60.0
+        },
+        {
+          "type": "label",
+          "text": "Dart",
+          "font_color": "#FFFFFFff",
+          "font_size": 24.0,
+          "x": 850.0,
+          "y": 700.0,
+          "width": 200.0,
+          "height": 60.0
+        },
+        {
+          "type": "rect",
+          "fill": "#5AC6F6FF",
+          "x": 1100.0,
+          "y": 700.0,
+          "width": 200.0,
+          "height": 60.0
+        },
+        {
+          "type": "label",
+          "text": "Text",
+          "font_color": "#FFFFFFff",
+          "font_size": 24.0,
+          "x": 1100.0,
+          "y": 700.0,
+          "width": 200.0,
+          "height": 60.0
+        },
+        {
+          "type": "label",
+          "text": "Framework (Dart)",
+          "font_color": "#0175C2ff",
+          "font_size": 36.0,
+          "x": 200.0,
+          "y": 460.0,
+          "width": 300.0,
+          "height": 60.0
+        },
+        {
+          "type": "label",
+          "text": "Engine (C++)",
+          "font_color": "#5AC6F6FF",
+          "font_size": 36.0,
+          "x": 200.0,
+          "y": 700.0,
+          "width": 300.0,
+          "height": 60.0
+        }
+      ]
+    },
+    {
+      "_comment": "widget focused",
+      "bg_color": "#FFFFFFff",
+      "content": [
+        {
+          "type": "rect",
+          "fill": "#00000044",
+          "x": 600.0,
+          "y": 300.0,
+          "width": 340.0,
+          "height": 60.0
+        },
+        {
+          "type": "label",
+          "text": "Material",
+          "font_color": "#00000044",
+          "font_size": 24.0,
+          "x": 600.0,
+          "y": 300.0,
+          "width": 340.0,
+          "height": 60.0
+        },
+        {
+          "type": "rect",
+          "fill": "#00000044",
+          "x": 960.0,
+          "y": 300.0,
+          "width": 340.0,
+          "height": 60.0
+        },
+        {
+          "type": "label",
+          "text": "Cupertino",
+          "font_color": "#00000044",
+          "font_size": 24.0,
+          "x": 960.0,
+          "y": 300.0,
+          "width": 340.0,
+          "height": 60.0
+        },
+        {
+          "type": "rect",
+          "fill": "#0175C2ff",
+          "x": 600.0,
+          "y": 380.0,
+          "width": 700.0,
+          "height": 60.0
+        },
+        {
+          "type": "label",
+          "text": "Widgets",
+          "font_color": "#FFFFFFff",
+          "font_size": 24.0,
+          "x": 600.0,
+          "y": 380.0,
+          "width": 700.0,
+          "height": 60.0
+        },
+        {
+          "type": "rect",
+          "fill": "#00000044",
+          "x": 600.0,
+          "y": 460.0,
+          "width": 700.0,
+          "height": 60.0
+        },
+        {
+          "type": "label",
+          "text": "Rendering",
+          "font_color": "#00000044",
+          "font_size": 24.0,
+          "x": 600.0,
+          "y": 460.0,
+          "width": 700.0,
+          "height": 60.0
+        },
+        {
+          "type": "rect",
+          "fill": "#00000044",
+          "x": 600.0,
+          "y": 540.0,
+          "width": 200.0,
+          "height": 60.0
+        },
+        {
+          "type": "label",
+          "text": "Animation",
+          "font_color": "#00000044",
+          "font_size": 24.0,
+          "x": 600.0,
+          "y": 540.0,
+          "width": 200.0,
+          "height": 60.0
+        },
+        {
+          "type": "rect",
+          "fill": "#00000044",
+          "x": 850.0,
+          "y": 540.0,
+          "width": 200.0,
+          "height": 60.0
+        },
+        {
+          "type": "label",
+          "text": "Painting",
+          "font_color": "#00000044",
+          "font_size": 24.0,
+          "x": 850.0,
+          "y": 540.0,
+          "width": 200.0,
+          "height": 60.0
+        },
+        {
+          "type": "rect",
+          "fill": "#00000044",
+          "x": 1100.0,
+          "y": 540.0,
+          "width": 200.0,
+          "height": 60.0
+        },
+        {
+          "type": "label",
+          "text": "Gestures",
+          "font_color": "#00000044",
+          "font_size": 24.0,
+          "x": 1100.0,
+          "y": 540.0,
+          "width": 200.0,
+          "height": 60.0
+        },
+        {
+          "type": "rect",
+          "fill": "#00000044",
+          "x": 600.0,
+          "y": 620.0,
+          "width": 700.0,
+          "height": 60.0
+        },
+        {
+          "type": "label",
+          "text": "Foundation",
+          "font_color": "#00000044",
+          "font_size": 24.0,
+          "x": 600.0,
+          "y": 620.0,
+          "width": 700.0,
+          "height": 60.0
+        },
+        {
+          "type": "rect",
+          "fill": "#00000044",
+          "x": 600.0,
+          "y": 700.0,
+          "width": 200.0,
+          "height": 60.0
+        },
+        {
+          "type": "label",
+          "text": "Skia",
+          "font_color": "#00000044",
+          "font_size": 24.0,
+          "x": 600.0,
+          "y": 700.0,
+          "width": 200.0,
+          "height": 60.0
+        },
+        {
+          "type": "rect",
+          "fill": "#00000044",
+          "x": 850.0,
+          "y": 700.0,
+          "width": 200.0,
+          "height": 60.0
+        },
+        {
+          "type": "label",
+          "text": "Dart",
+          "font_color": "#00000044",
+          "font_size": 24.0,
+          "x": 850.0,
+          "y": 700.0,
+          "width": 200.0,
+          "height": 60.0
+        },
+        {
+          "type": "rect",
+          "fill": "#00000044",
+          "x": 1100.0,
+          "y": 700.0,
+          "width": 200.0,
+          "height": 60.0
+        },
+        {
+          "type": "label",
+          "text": "Text",
+          "font_color": "#00000044",
+          "font_size": 24.0,
+          "x": 1100.0,
+          "y": 700.0,
+          "width": 200.0,
+          "height": 60.0
+        }
+      ]
+    },
+    {
+      "_comment": "widget zoom in",
+      "bg_color": "#FFFFFFff",
+      "content": [
+        {
+          "type": "rect",
+          "fill": "#0175C2ff",
+          "x": 600.0,
+          "y": 380.0,
+          "width": 700.0,
+          "height": 60.0,
+          "animation": {
+            "offset_y": 100.0,
+            "duration_in_milliseconds": 1000
+          }
+        },
+        {
+          "type": "label",
+          "text": "Widgets",
+          "font_color": "#FFFFFFff",
+          "font_size": 24.0,
+          "x": 600.0,
+          "y": 380.0,
+          "width": 700.0,
+          "height": 60.0,
+          "animation": {
+            "offset_y": 100.0,
+            "duration_in_milliseconds": 1000
+          }
+        },
+        {
+          "type": "label",
+          "text": "Everything is a",
+          "font_color": "#0175C2ff",
+          "font_size": 48.0,
+          "x": 400.0,
+          "y": 600.0,
+          "width": 700.0,
+          "height": 60.0,
+          "animation": {
+            "duration_in_milliseconds": 1000,
+            "curve": "easeInOut",
+            "delay_in_milliseconds": 1000,
+            "opacity_start": 0.0,
+            "opacity_end": 1.0
+          }
+        },
+        {
+          "type": "label",
+          "text": "widget",
+          "font_color": "#0175C2ff",
+          "font_size": 56.0,
+          "x": 660.0,
+          "y": 598.0,
+          "width": 700.0,
+          "height": 60.0,
+          "animation": {
+            "duration_in_milliseconds": 1000,
+            "curve": "easeIn",
+            "delay_in_milliseconds": 1000,
+            "opacity_start": 0.0,
+            "opacity_end": 1.0,
+            "rotation": 360.0
+          }
+        },
+        {
+          "type": "label",
+          "text": "(mostly..)",
+          "font_color": "#0175C2ff",
+          "font_size": 48.0,
+          "x": 860.0,
+          "y": 598.0,
+          "width": 700.0,
+          "height": 60.0,
+          "animation": {
+            "duration_in_milliseconds": 1000,
+            "curve": "easeIn",
+            "delay_in_milliseconds": 2500,
+            "opacity_start": 0.0,
+            "opacity_end": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "_comment": "Type of Widgets",
+      "bg_color": "#FFFFFFff",
+      "content": [
+        {
+          "type": "label",
+          "text": "Types of Widgets",
+          "font_color": "#0175C2ff",
+          "font_size": 54.0,
+          "x": 0.0,
+          "y": 100.0,
+          "width": 1920.0,
+          "height": 100.0
+        },
+        {
+          "type": "label",
+          "text": "Basics",
+          "font_color": "#0175C2ff",
+          "font_size": 54.0,
+          "x": 0.0,
+          "y": 300.0,
+          "width": 400.0,
+          "height": 100.0
+        },
+        {
+          "type": "label",
+          "text": "Layout",
+          "font_color": "#0175C2ff",
+          "font_size": 54.0,
+          "x": 0.0,
+          "y": 500.0,
+          "width": 400.0,
+          "height": 100.0
+        },
+        {
+          "type": "label",
+          "text": "Assets",
+          "font_color": "#0175C2ff",
+          "font_size": 54.0,
+          "x": 0.0,
+          "y": 700.0,
+          "width": 400.0,
+          "height": 100.0
+        },
+        {
+          "type": "label",
+          "text": "Material",
+          "font_color": "#0175C2ff",
+          "font_size": 54.0,
+          "x": 450.0,
+          "y": 300.0,
+          "width": 400.0,
+          "height": 100.0
+        },
+        {
+          "type": "label",
+          "text": "Cupertino",
+          "font_color": "#0175C2ff",
+          "font_size": 54.0,
+          "x": 450.0,
+          "y": 500.0,
+          "width": 400.0,
+          "height": 100.0
+        },
+        {
+          "type": "label",
+          "text": "Text",
+          "font_color": "#0175C2ff",
+          "font_size": 54.0,
+          "x": 950.0,
+          "y": 300.0,
+          "width": 400.0,
+          "height": 100.0
+        },
+        {
+          "type": "label",
+          "text": "Input",
+          "font_color": "#0175C2ff",
+          "font_size": 54.0,
+          "x": 950.0,
+          "y": 500.0,
+          "width": 400.0,
+          "height": 100.0
+        },
+        {
+          "type": "label",
+          "text": "Interaction",
+          "font_color": "#0175C2ff",
+          "font_size": 54.0,
+          "x": 950.0,
+          "y": 700.0,
+          "width": 400.0,
+          "height": 100.0
+        },
+        {
+          "type": "label",
+          "text": "Scrolling",
+          "font_color": "#0175C2ff",
+          "font_size": 54.0,
+          "x": 950.0,
+          "y": 900.0,
+          "width": 400.0,
+          "height": 100.0
+        },
+        {
+          "type": "label",
+          "text": "Styling",
+          "font_color": "#0175C2ff",
+          "font_size": 54.0,
+          "x": 1450.0,
+          "y": 300.0,
+          "width": 400.0,
+          "height": 100.0
+        },
+        {
+          "type": "label",
+          "text": "Painting",
+          "font_color": "#0175C2ff",
+          "font_size": 54.0,
+          "x": 1450.0,
+          "y": 500.0,
+          "width": 400.0,
+          "height": 100.0
+        },
+        {
+          "type": "label",
+          "text": "Animation",
+          "font_color": "#0175C2ff",
+          "font_size": 54.0,
+          "x": 1450.0,
+          "y": 700.0,
+          "width": 400.0,
+          "height": 100.0
+        },
+        {
+          "type": "label",
+          "text": "Accessibility",
+          "font_color": "#0175C2ff",
+          "font_size": 54.0,
+          "x": 1450.0,
+          "y": 900.0,
+          "width": 400.0,
+          "height": 100.0
+        }
+      ]
+    },
+    {
+      "_comment": "Basic widgets",
+      "bg_color": "#FFFFFFff",
+      "content": [
+        {
+          "type": "label",
+          "text": "Basic widgets",
+          "font_color": "@replace/primary_blue",
+          "align": "centerLeft",
+          "font_size": 56.0,
+          "x": 100.0,
+          "y": 50.0,
+          "width": 400.0,
+          "height": 100.0
+        },
+        {
+          "type": "label",
+          "text": "All you need to know for creating simple Flutter app",
+          "font_color": "#0175C2aa",
+          "align": "centerLeft",
+          "font_size": 32.0,
+          "x": 100.0,
+          "y": 120.0,
+          "width": 1100.0,
+          "height": 100.0
+        },
+        {
+          "type": "label",
+          "text": "Container",
+          "font_color": "@replace/primary_blue",
+          "font_size": 36.0,
+          "x": 80.0,
+          "y": 300.0,
+          "width": 200.0,
+          "height": 100.0
+        },
+        {
+          "type": "basic_widget",
+          "widget_type": "container",
+          "x": 100.0,
+          "y": 400.0,
+          "width": 150.0,
+          "height": 150.0
+        },
+        {
+          "type": "label",
+          "text": "AppBar",
+          "font_color": "@replace/primary_blue",
+          "font_size": 36.0,
+          "x": 80.0,
+          "y": 600.0,
+          "width": 200.0,
+          "height": 100.0
+        },
+        {
+          "type": "basic_widget",
+          "widget_type": "appbar",
+          "x": 100.0,
+          "y": 700.0,
+          "width": 350.0,
+          "height": 60.0
+        },
+        {
+          "type": "label",
+          "text": "Row",
+          "font_color": "@replace/primary_blue",
+          "font_size": 36.0,
+          "x": 580.0,
+          "y": 300.0,
+          "width": 200.0,
+          "height": 100.0
+        },
+        {
+          "type": "basic_widget",
+          "widget_type": "row",
+          "x": 580.0,
+          "y": 400.0,
+          "width": 300.0,
+          "height": 150.0
+        },
+        {
+          "type": "label",
+          "text": "Column",
+          "font_color": "@replace/primary_blue",
+          "font_size": 36.0,
+          "x": 580.0,
+          "y": 600.0,
+          "width": 200.0,
+          "height": 100.0
+        },
+        {
+          "type": "basic_widget",
+          "widget_type": "column",
+          "x": 620.0,
+          "y": 700.0,
+          "width": 100.0,
+          "height": 300.0
+        },
+        {
+          "type": "label",
+          "text": "Button",
+          "font_color": "@replace/primary_blue",
+          "font_size": 36.0,
+          "x": 900.0,
+          "y": 300.0,
+          "width": 200.0,
+          "height": 100.0
+        },
+        {
+          "type": "basic_widget",
+          "widget_type": "button",
+          "x": 900.0,
+          "y": 440.0,
+          "width": 200.0,
+          "height": 44.0
+        },
+        {
+          "type": "label",
+          "text": "Text",
+          "font_color": "@replace/primary_blue",
+          "font_size": 36.0,
+          "x": 900.0,
+          "y": 600.0,
+          "width": 200.0,
+          "height": 100.0
+        },
+        {
+          "type": "basic_widget",
+          "widget_type": "text",
+          "font_color": "@replace/primary_blue",
+          "x": 870.0,
+          "y": 700.0,
+          "width": 300.0,
+          "height": 100.0
+        },
+        {
+          "type": "label",
+          "text": "Scaffold",
+          "font_color": "@replace/primary_blue",
+          "font_size": 36.0,
+          "x": 1400.0,
+          "y": 300.0,
+          "width": 200.0,
+          "height": 100.0
+        },
+        {
+          "type": "material_app_example",
+          "x": 1300.0,
+          "y": 400.0,
+          "width": 400.0,
+          "height": 600.0
+        }
+      ]
+    },
+    {
+      "_comment": "Layout widgets",
+      "bg_color": "#FFFFFFff",
+      "content":[
+        {
+          "type": "label",
+          "text": "Layout widgets",
+          "font_color": "@replace/primary_blue",
+          "align": "centerLeft",
+          "font_size": 56.0,
+          "x": 100.0,
+          "y": 50.0,
+          "width": 400.0,
+          "height": 100.0
+        },
+        {
+          "type": "label",
+          "text": "Row",
+          "font_color": "@replace/primary_blue",
+          "font_size": 36.0,
+          "x": 100.0,
+          "y": 300.0,
+          "width": 200.0,
+          "height": 100.0
+        },
+        {
+          "type": "basic_widget",
+          "widget_type": "row",
+          "x": 120.0,
+          "y": 400.0,
+          "width": 300.0,
+          "height": 150.0
+        },
+        {
+          "type": "label",
+          "text": "Column",
+          "font_color": "@replace/primary_blue",
+          "font_size": 36.0,
+          "x": 100.0,
+          "y": 600.0,
+          "width": 200.0,
+          "height": 100.0
+        },
+        {
+          "type": "basic_widget",
+          "widget_type": "column",
+          "x": 150.0,
+          "y": 700.0,
+          "width": 100.0,
+          "height": 300.0
+        },
+        {
+          "type": "label",
+          "text": "Stack",
+          "font_color": "@replace/primary_blue",
+          "font_size": 36.0,
+          "x": 450.0,
+          "y": 300.0,
+          "width": 200.0,
+          "height": 100.0
+        },
+        {
+          "type": "basic_widget",
+          "widget_type": "stack",
+          "x": 470.0,
+          "y": 430.0,
+          "width": 300.0,
+          "height": 150.0
+        },
+        {
+          "type": "label",
+          "text": "List",
+          "font_color": "@replace/primary_blue",
+          "font_size": 36.0,
+          "x": 800.0,
+          "y": 300.0,
+          "width": 200.0,
+          "height": 100.0
+        },
+        {
+          "type": "basic_widget",
+          "widget_type": "list",
+          "x": 800.0,
+          "y": 400.0,
+          "width": 300.0,
+          "height": 500.0
+        },
+        {
+          "type": "label",
+          "text": "Grid",
+          "font_color": "@replace/primary_blue",
+          "font_size": 36.0,
+          "x": 1250.0,
+          "y": 300.0,
+          "width": 200.0,
+          "height": 100.0
+        },
+        {
+          "type": "basic_widget",
+          "widget_type": "grid",
+          "x": 1200.0,
+          "y": 400.0,
+          "width": 300.0,
+          "height": 500.0
+        },
+        {
+          "type": "label",
+          "text": "and more!",
+          "font_color": "@replace/primary_blue",
+          "font_size": 36.0,
+          "x": 1550.0,
+          "y": 600.0,
+          "width": 200.0,
+          "height": 100.0
+        }
+      ]
+    },
+    {
+      "_comment": "Layout widgets (single child)",
+      "bg_color": "#FFFFFFff",
+      "content":[
+        {
+          "type": "label",
+          "text": "Layout widgets (cont.)",
+          "font_color": "@replace/primary_blue",
+          "align": "centerLeft",
+          "font_size": 56.0,
+          "x": 100.0,
+          "y": 50.0,
+          "width": 600.0,
+          "height": 100.0
+        },
+        {
+          "type": "label",
+          "text": "Container",
+          "font_color": "@replace/primary_blue",
+          "font_size": 36.0,
+          "x": 150.0,
+          "y": 300.0,
+          "width": 200.0,
+          "height": 100.0
+        },
+        {
+          "type": "layout_widget",
+          "widget_type": "container",
+          "x": 100.0,
+          "y": 400.0,
+          "width": 300.0,
+          "height": 200.0
+        },
+        {
+          "type": "label",
+          "text": "Align",
+          "font_color": "@replace/primary_blue",
+          "font_size": 36.0,
+          "x": 550.0,
+          "y": 300.0,
+          "width": 200.0,
+          "height": 100.0
+        },
+        {
+          "type": "layout_widget",
+          "widget_type": "align",
+          "x": 500.0,
+          "y": 400.0,
+          "width": 300.0,
+          "height": 200.0
+        },
+        {
+          "type": "label",
+          "text": "Center",
+          "font_color": "@replace/primary_blue",
+          "font_size": 36.0,
+          "x": 950.0,
+          "y": 300.0,
+          "width": 200.0,
+          "height": 100.0
+        },
+        {
+          "type": "layout_widget",
+          "widget_type": "center",
+          "x": 900.0,
+          "y": 400.0,
+          "width": 300.0,
+          "height": 200.0
+        },
+        {
+          "type": "label",
+          "text": "Padding",
+          "font_color": "@replace/primary_blue",
+          "font_size": 36.0,
+          "x": 1350.0,
+          "y": 300.0,
+          "width": 200.0,
+          "height": 100.0
+        },
+        {
+          "type": "layout_widget",
+          "widget_type": "padding",
+          "x": 1300.0,
+          "y": 400.0,
+          "width": 300.0,
+          "height": 200.0
+        },
+        {
+          "type": "label",
+          "text": "and more!",
+          "font_color": "@replace/primary_blue",
+          "font_size": 36.0,
+          "x": 1650.0,
+          "y": 450.0,
+          "width": 200.0,
+          "height": 100.0
+        }
+      ]
+    },
+    {
+      "_comment": "Widget demo",
+      "bg_color": "#FFFFFFff",
+      "content": [
+        {
+          "type": "label",
+          "text": "Demo",
+          "font_color": "#0175C2ff",
+          "font_size": 120.0,
+          "x": 0.0,
+          "y": 0.0,
+          "width": 1920.0,
+          "height": 1080.0
+        }
+      ]
+    },
+    {
+      "_comment": "Codelabs link",
+      "bg_color": "#FFFFFFff",
+      "content": [
+        {
+          "type": "label",
+          "text": "https://flutter.dev/docs/codelabs/layout-basics",
+          "font_color": "#0175C2ff",
+          "font_size": 80.0,
+          "x": 0.0,
+          "y": 0.0,
+          "width": 1920.0,
+          "height": 1080.0
+        }
+      ]
+    },
+    {
+      "_comment": "Stateful / Stateless",
+      "bg_color": "#FFFFFFff",
+      "content": [
+        {
+          "type": "label",
+          "text": "Stateful vs Stateless",
+          "font_color": "#0175C2ff",
+          "font_size": 120.0,
+          "x": 0.0,
+          "y": 0.0,
+          "width": 1920.0,
+          "height": 1080.0
+        }
+      ]
+    },
+    {
+      "_comment": "Stateless",
+      "content": [
+        {
+          "type": "label",
+          "text": "Stateless widget",
+          "font_color": "@replace/primary_blue",
+          "align": "centerLeft",
+          "font_size": 56.0,
+          "x": 100.0,
+          "y": 50.0,
+          "width": 500.0,
+          "height": 100.0
+        },
+        {
+          "type": "label",
+          "text": "A widget that does not require mutable state.",
+          "font_color": "#0175C2aa",
+          "align": "centerLeft",
+          "font_size": 32.0,
+          "x": 100.0,
+          "y": 120.0,
+          "width": 1100.0,
+          "height": 100.0
+        },
+        {
+          "type": "stateless_widget",
+          "x": 0.0,
+          "y": 200.0,
+          "width": 1920.0,
+          "height": 880.0
+        }
+      ]
+    },
+    {
+      "_comment": "Stateful",
+      "content": [
+        {
+          "type": "label",
+          "text": "Stateful widget",
+          "font_color": "@replace/primary_blue",
+          "align": "centerLeft",
+          "font_size": 56.0,
+          "x": 100.0,
+          "y": 50.0,
+          "width": 500.0,
+          "height": 100.0
+        },
+        {
+          "type": "label",
+          "text": "A widget that has mutable state.",
+          "font_color": "#0175C2aa",
+          "align": "centerLeft",
+          "font_size": 32.0,
+          "x": 100.0,
+          "y": 120.0,
+          "width": 1100.0,
+          "height": 100.0
+        },
+        {
+          "type": "stateful_widget",
+          "x": 0.0,
+          "y": 200.0,
+          "width": 1920.0,
+          "height": 880.0
+        }
+      ]
+    },
+    {
+      "_comment": "Workshop",
+      "bg_color": "#FFFFFFff",
+      "content": [
+        {
+          "type": "label",
+          "text": "Workshop time ⏰",
+          "font_color": "#0175C2ff",
+          "font_size": 120.0,
+          "x": 0.0,
+          "y": 0.0,
+          "width": 1920.0,
+          "height": 1080.0
+        }
+      ]
+    },
+    {
+      "_comment": "todo_1_step_1",
+      "bg_color": "#c4c4c4ff",
+      "content": [
+        {
+          "type": "todo_1_step_1",
+          "x": 760.0,
+          "y": 440.0,
+          "width": 500.0,
+          "height": 100.0
+        }
+      ]
+    },
+    {
+      "_comment": "todo_1_step_2",
+      "bg_color": "#c4c4c4ff",
+      "content": [
+        {
+          "type": "todo_1_step_2",
+          "x": 760.0,
+          "y": 440.0,
+          "width": 500.0,
+          "height": 100.0
+        }
+      ]
+    },
+    {
+      "_comment": "todo_1_step_3",
+      "bg_color": "#c4c4c4ff",
+      "content": [
+        {
+          "type": "todo_1_step_3",
+          "x": 760.0,
+          "y": 440.0,
+          "width": 500.0,
+          "height": 100.0
+        }
+      ]
+    },
+    {
+      "_comment": "todo_1_step_4",
+      "bg_color": "#c4c4c4ff",
+      "content": [
+        {
+          "type": "todo_1_step_4",
+          "x": 760.0,
+          "y": 140.0,
+          "width": 500.0,
+          "height": 800.0
+        }
+      ]
+    },
+    {
+      "_comment": "what's next",
+      "content": [
+        {
+          "type": "label",
+          "text": "What's next?",
+          "font_color": "#0175C2ff",
+          "font_size": 120.0,
+          "x": 0.0,
+          "y": 0.0,
+          "width": 1920.0,
+          "height": 1080.0
+        }
+      ]
+    },
+    {
+      "_comment": "codelab & cookbook",
+      "content": [
+        {
+          "type": "label",
+          "text": "https://flutter.dev/docs/codelabs",
+          "font_color": "#0175C2ff",
+          "font_size": 80.0,
+          "x": 0.0,
+          "y": 0.0,
+          "width": 1920.0,
+          "height": 540.0
+        },
+        {
+          "type": "label",
+          "text": "https://flutter.dev/docs/cookbook",
+          "font_color": "#0175C2ff",
+          "font_size": 80.0,
+          "x": 0.0,
+          "y": 540.0,
+          "width": 1920.0,
+          "height": 540.0
+        }
+      ]
+    },
+    {
+      "_comment": "Quiz",
+      "bg_color": "#FFFFFFff",
+      "content": [
+        {
+          "type": "label",
+          "text": "Quiz time 📝",
+          "font_color": "#0175C2ff",
+          "font_size": 120.0,
+          "x": 0.0,
+          "y": 0.0,
+          "width": 1920.0,
+          "height": 1080.0
+        }
+      ]
+    },
+    {
+      "_comment": "Survey 1",
+      "content": [
+        {
+          "type": "image",
+          "file": "images/survey/survey_1.png",
+          "x": 0.0,
+          "y": 0.0,
+          "width": 1920.0,
+          "height": 1080.0
+        }
+      ]
+    },
+    {
+      "_comment": "Survey 2",
+      "content": [
+        {
+          "type": "image",
+          "file": "images/survey/survey_2.png",
+          "x": 0.0,
+          "y": 0.0,
+          "width": 1920.0,
+          "height": 1080.0
+        }
+      ]
+    }
+  ]
+}
